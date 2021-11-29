@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>회색_HTML_CSS_javascript_버튼</title>
+
+        <style>
+            button {
+            width: 15%;
+            height: 80px;
+            font-size: large;
+            }
+            .grey {
+                color: white;
+                background-color: grey;
+                border-color: grey;
+                border: 5px;
+            }
+
+            .white {
+                color: black;
+                background-color: white;
+                border-color: black;
+            }
+           
+        </style>
+    </head>
+
+
+    <body>
+        <button class="grey" id="html">HTML</button>
+        <button class="grey" id="css">CSS</button>
+        <button class="grey" id="js">javascript</button>
+    </body>
+
+
+    <script>
+        //과제
+        const html = document.getElementById("html");
+        const css = document.getElementById("css");
+        const js = document.getElementById("js");
+
+        html.addEventListener("click", function () {
+            reset();
+            change(html);
+        });
+        css.addEventListener("click", function () {
+            reset();
+            change(css);
+        });
+        js.addEventListener("click", function () {
+            reset();
+            change(js);
+        });
+
+        function reset() {
+            html.className = "grey";
+            css.className = "grey";
+            js.className = "grey";
+        }
+
+        function change(button) {
+            button.className = "white";
+        }
+    </script>
+    
+</html>

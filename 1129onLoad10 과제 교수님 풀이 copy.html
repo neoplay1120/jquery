@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>jquery</title>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+
+        <style></style>
+    </head>
+
+    <body>
+
+        <p id="text"></p>
+
+        <button>red</button>
+        <button>blue</button>
+        <button>green</button>
+
+    </body>
+    
+    <script>
+
+        $("button").css("display", "none");
+        var text = '';
+        
+        function firstask() {
+
+            text = prompt("값을 입력해 주세요.");
+            if (text == '') {
+                alert('값을 입력해 주세요.');
+                firstask();
+            } else {
+                $("#text").text(text); $("button").css("display", "");
+            }
+
+        }
+
+        $(function () {
+            firstask();
+
+            $("button").on("click", function () {
+                let color = $(this).html();
+                alert(color + "로 변경됩니다.");
+                $("#text").css("color", color);
+            })
+
+        });
+
+        //버튼을 만들 때 영어 red,green,blue 를 설정하지 않고 한글로 빨강 초록 파랑 이라고 만들면 당연히 적용이 안된다. 
+        //내가 이해한게 그래서 맞다!
+    </script>
+</html>

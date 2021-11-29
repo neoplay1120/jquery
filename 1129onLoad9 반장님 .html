@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>css</title>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+        <style>
+        </style>
+    </head>
+    <body>
+
+        <button id="font_change">폰트 사이즈 변경</button>
+        <button id="color_change">칼라 변경</button>
+
+        <div id="text">text</div>
+    </body>
+    <script>
+        $(function () {
+
+            $('#font_change').on('click', function () {
+                $('#text').css('font-size', '200%');
+            })
+
+            $('#color_change').on('click', function () {
+                $('#text').css('color', 'red');
+            })
+
+        });
+    </script>
+</html>

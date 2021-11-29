@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>회색버튼을 Jquery를이용해서 만들어보자</title>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+        </script>
+
+        <style>
+            
+            button {
+            width: 15%;
+            height: 80px;
+            font-size: large;
+            }
+            .grey {
+                color: white;
+                background-color: grey;
+                border-color: grey;
+                border: 5px;
+            }
+            .white {
+                color: black;
+                background-color: white;
+                border-color: black;
+            }
+           
+        </style>
+    </head>
+
+
+    <body>
+        <button class="grey" id="html">HTML</button>
+        <button class="grey" id="css">CSS</button>
+        <button class="grey" id="js">javascript</button>
+    </body>
+
+
+    <script>
+
+        const html = document.getElementById("html");
+        const css = document.getElementById("css");
+        const js = document.getElementById("js");
+
+        function reset() {
+            html.className = "grey";
+            css.className = "grey";
+            js.className = "grey";
+        }
+
+        function change(button) {
+            button.className = "white";
+        }
+
+        $(function () {
+            $("#html").on("click", function () {
+                reset();
+                change(html);
+            })
+        });
+
+        $(function () {
+            $("#css").on("click", function () {
+                reset();
+                change(css);
+            })
+        });
+
+        $(function () {
+            $("#js").on("click", function () {
+                reset();
+                change(js);
+            })
+        });
+      
+    </script>
+    
+</html>

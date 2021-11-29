@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body id="body">
+        <p id="text"></p>
+        <div id="btn">
+            <button id="red">빨강</button>
+            <button id="blue">파랑</button>
+            <button id="green">초록</button>
+        </div>
+
+    </body>
+    <script>
+
+        document.getElementById("btn").style.display = "none";
+
+        getName();
+
+        function getName() {
+            var name = prompt("텍스트를 입력해 주세요.");
+
+            if (name == "") {
+                alert("이름이 등록되지 않았어요.");
+                getName();
+            } else {
+                document
+                    .getElementById("text")
+                    .innerText = name;
+                document
+                    .getElementById("btn")
+                    .style
+                    .display = "block";
+            }
+        }
+
+        document.getElementById("red").addEventListener("click",function(){
+            document.getElementById("text").style.color = "red";
+        })
+
+        document.getElementById("blue").addEventListener("click",function(){
+            document.getElementById("text").style.color = "blue";
+        })
+
+        document.getElementById("green").addEventListener("click",function(){
+            document.getElementById("text").style.color = "green";
+        })
+
+
+
+    </script>
+</html>

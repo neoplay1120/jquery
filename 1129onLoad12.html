@@ -1,0 +1,106 @@
+
+<html>
+    <head>
+        <title>Jquery를 이용해서 박지성기사 등록하기</title>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+        </script>
+
+        <style>
+            .main{
+                position: relative;
+                left: 0px;
+                top: 0px;
+            }
+
+            #head{
+                width: 400px;
+                height: 80px;
+                font-size: 30px;
+                line-height: 80px;
+                font-family: Verdana;             
+                text-indent: 10px;
+                background-color: rgb(78, 78, 197);
+                color: #ffffff;
+            }
+            #newsbody{
+                width: 400px;
+                height: 500px;
+                font-size: 20px;
+                line-height: 20px;
+                font-family: Verdana;  
+                background-color: rgb(184, 184, 185);
+                color: #000000;
+                text-indent: 10px;
+
+            }
+            #list1{
+                width: 380px;
+                height: 80px;
+                font-size: 20px;
+                line-height: 20px;
+                font-family: Verdana;  
+                background-color: rgb(255, 255, 255);
+                color: #000000;
+                text-indent: 10px;
+                margin-left: 10px;
+                margin-top: 20px;
+            }
+            #list2{
+                width: 380px;
+                height: 80px;
+                font-size: 20px;
+                line-height: 20px;
+                font-family: Verdana;  
+                background-color: rgb(255, 255, 255);
+                color: #000000;
+                text-indent: 10px;
+                margin-left: 10px;
+                margin-top: 20px;
+            }
+
+            #list3{
+                width: 380px;
+                height: 80px;
+                font-size: 20px;
+                line-height: 20px;
+                font-family: Verdana;  
+                background-color: rgb(255, 255, 255);
+                color: #000000;
+                text-indent: 10px;
+                margin-left: 10px;
+                margin-top: 20px;
+            }
+           
+        </style>
+    </head>
+
+
+    <body>
+        <div class="main">
+            <div id="head">기사를 등록해보자</div>
+            <div id="newsbody">
+                오늘의 기사내용
+                <!-- <div class="list" id="list1"> 1박지성</div>
+                <div class="list" id="list2"> 2박지성</div>
+                <div class="list" id="list3"> 3박지성</div> -->
+            </div>
+        </div><br/>
+        <button id="btn">기사 등록하기</button>
+    </body>
+
+    <script>
+
+        $(function () {
+            $("#btn").on("click", function () {
+                let name = prompt('작성자 명을 등록하세요');
+                let news = prompt('기사를 작성하세요');
+                $("#newsbody").append('<div class="list">' + name + '' + news + '</div>');
+            })
+        });
+
+    </script>
+</html>
+
