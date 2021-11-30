@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>회색버튼을 Jquery를이용해서 만들어보자</title>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+        </script>
+
+        <style>
+          div{
+              display: inline-block;
+              background-color: tomato;
+          }
+        </style>
+    </head>
+
+
+    <body>
+        <img src="/images/w3jquery.gif" alt="jQuery" width="100" height="140"><br><br>
+
+        <button id="btn1">Insert before</button>
+        <button id="btn2">Insert after</button>
+
+        <div id="test">test</div>
+        
+    </body>
+
+
+    <script>
+
+            // $(document).ready(function () {
+            //         $("#btn1").click(function () {
+            //             $("img").before("<b>Before</b>");
+            //         });
+
+            //         $("#btn2").click(function () {
+            //             $("img").after("<i>After</i>");
+            //         });
+            //     });
+
+            $(function(){
+                $("#btn1").click(function(){
+                    $("#test").append("Before");
+                });
+
+                $("#btn2").click(function(){
+                    $("#test").after("dd")
+                });
+            })
+
+       
+    </script>
+    
+</html>

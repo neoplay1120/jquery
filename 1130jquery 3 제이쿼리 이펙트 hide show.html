@@ -8,27 +8,36 @@
         </script>
 
         <style>
+            p{
+                display: inline-block;
+                width: 30px;
+                height:  50px;
+                line-height: 50px;
+                
+            }
           
         </style>
     </head>
 
 
     <body>
-        <p>1</p>
-        <p>12</p>
-        <p>13</p>
-        <p>14</p>
-        <p>15</p>
-        
+       <button id="hide">hide</button>
+       <button id="show">show</button>
+
+       <p>텍스트 입니다.</p>
     </body>
 
 
     <script>
 
         $(function(){
-            $("p").click(function(){
-                $(this).hide();
+            $("#hide").click(function(){
+                $("p").hide();
             });
+            $("#show").click(function(){
+                $("p").show();
+            });
+            
         });
 
        
