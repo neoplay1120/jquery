@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+        <head>
+            <title>제이쿼리 Form 과제</title>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.js"
+                integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+            </script>
+
+            <style>
+            </style>
+        </head>
+
+        <body>
+             
+            <button>Start Animation</button>
+
+            <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+        </body>
+
+        <script>
+            
+            // $(document).ready(function(){
+            //     $("button").click(function(){
+            //         $("div").animate({
+            //         left: '250px',
+            //         opacity: '0.5',
+            //         height: '150px',
+            //         width: '150px'
+            //         });
+            //     });
+            // });
+
+            $(function(){
+                $("button").click(function(){
+                    $("div").animate({
+                        left: "400px",
+                        opacity: "1",
+                        height: "300px",
+                        width: "500px"
+                    })
+                })
+            })
+
+        </script>
+
+</html>
