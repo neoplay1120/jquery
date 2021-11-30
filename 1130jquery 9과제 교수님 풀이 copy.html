@@ -64,6 +64,27 @@
     </body>
     <script>
 
-        $(function () {});
+        $(function () {
+            $("#master").click(function(){
+                if($(this).is(':checked')){
+                    $(".slave").prop("checked",true);
+                }
+                else{
+                    $(".slave").prop("checked",false);
+                }
+ 
+                alert($(".slave:checked").length);
+            });
+
+            $("#log").click(function(){
+                $(".slave").each(
+                    function(){
+                        if($(this).is(":checked")){
+                            console.log($(this).val());
+                        }
+                    } 
+                )
+            });
+        });
     </script>
 </html>
