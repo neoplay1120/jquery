@@ -70,12 +70,8 @@
                 let hobby = $("input:checkbox[name=hobby]:checked").length;
                 let job = $("#job").val();
                 let sex = $("input:radio[name=sex]:checked").val();
-                let password = $("#pw")
-                    .val()
-                    .length;
-                let id = $("#id")
-                    .val()
-                    .length;
+                let password = $("#pw").val().length; 
+                let id = $("#id").val().length;
 
                 if (hobby < 3) {
                     alert("취미는 3개 이상 선택하셔야 합니다.");

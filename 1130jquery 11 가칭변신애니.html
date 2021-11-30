@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+        <head>
+            <title>제이쿼리 Form 과제</title>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.js"
+                integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+            </script>
+
+            <style>
+                .box{
+                    position: absolute;
+                }
+                #box1{
+                    width: 300px;
+                    height: 600px;
+                    background: tomato;
+                    top: 100px;
+                    
+
+                }
+                #box2{
+                    width: 300px;
+                    height: 100px;
+
+                }
+                #box3{
+                    width: 300px;
+                    height: 100px;
+
+                }
+            </style>
+        </head>
+
+        <body>
+            <div>
+                <div class="box">
+                    <div id="box1">1</div>
+                    <div id="box2">2</div>
+                    <div id="box3">3</div>
+                </div>
+
+                <div class="circle">
+                    <div id="circle1">1</div>
+                    <div id="circle2">2</div>
+                    <div id="circle3">3</div>
+                </div>
+
+            </div>
+             
+            <button>Start Animation</button>
+
+        </body>
+
+        <script>
+            $(function(){
+                $("button").click(function(){
+                    $("div").animate({
+                        left: "400px",
+                        opacity: "1",
+                        height: "300px",
+                        width: "500px"
+                    })
+                })
+            })
+
+        </script>
+
+</html>
