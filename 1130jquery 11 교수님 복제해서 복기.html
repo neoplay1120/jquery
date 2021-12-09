@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>jquery</title>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+
+        <style>
+            div {
+                position: absolute;
+                border: 5px solid #000;
+                display: inline-block;
+            }
+
+            #head{
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                background-color: brown;
+            }
+       
+        </style>
+    </head>
+    <body>
+
+        <div id="head"></div>
+
+
+        <br/>
+        <br/>
+        <br/>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <button id="car">자동차변신</button>
+        <button id="robot">로보트변신</button>
+
+    </body>
+        <script>
+
+            function car() {
+                $("#head").animate({
+                    left: "300px",
+                    top: "10px"
+                }, 1000);
+            }
+
+            function robot() {
+                $("#head").animate({
+                    left:"350px",
+                    top: "10px"
+                }, 1000);
+            }
+        
+            $(function () {
+                $("#car").click(function(){
+                    car();
+                });
+
+                $("#robot").click(function(){
+                    robot();
+                });
+            });
+
+        </script>
+</html>

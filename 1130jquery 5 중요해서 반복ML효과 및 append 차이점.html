@@ -28,28 +28,14 @@
 
 
     <script>
-
-            // $(document).ready(function () {
-            //         $("#btn1").click(function () {
-            //             $("img").before("<b>Before</b>");
-            //         });
-
-            //         $("#btn2").click(function () {
-            //             $("img").after("<i>After</i>");
-            //         });
-            //     });
-
             $(function(){
                 $("#btn1").click(function(){
-                    $("#test").append("Before");
-                });
-
+                    $("#test").append("<>테그사이에<> 끼워들어감");
+                })
                 $("#btn2").click(function(){
-                    $("#test").after("dd")
-                });
+                    $("#test").after("<><>밖에 들어감");
+                })
             })
-
-       
     </script>
     
 </html>
