@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>mario</title>
+
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+    </head>
+    <style>
+
+        #mario {
+            width: 100px;
+        }
+
+        #bg{
+            border: 1px soild #000;
+            width:100%;
+            height:100%;
+            position: relative;
+        }
+        #mario_block{
+            position: absolute;
+            left:10px;
+            bottom:10px;
+        }
+    </style>
+    <body>
+
+        <div id="bg">
+
+            <div id="mario_block"><img id="mario" src="man.gif"></div>
+
+        </div>
+
+    </body>
+    <script>
+        var jump = false;
+
+        $(function(){
+            $("body").keydown(function(event){ 
+               if(event.keyCode == "32" && jump == false){
+                   jump = true;
+                   $("#mario_block").animate({"bottom":"200px"},300)
+                                    .animate({"bottom":"10px"},250,function(){
+                   jump = false;
+                   });
+               }
+            })
+        })
+
+        ///이 방법 말고 다른건?
+    </script>
+
+</html>

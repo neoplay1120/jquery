@@ -1,4 +1,5 @@
 <html>
+
     <head>
         <title>jquery</title>
         <meta charset="utf-8">
@@ -15,16 +16,19 @@
 
         <style></style>
     </head>
-    <body>
 
+
+    <body>
         <table class="table">
+            
             <thead>
                 <tr>
-                    <td><input type="checkbox" id="master"></td>
+                    <td><input type="checkbox"   id="master"></td>
                     <td>제목</td>
                     <td>닐짜</td>
                 </tr>
             </thead>
+
             <tbody>
                 <tr>
                     <td><input type="checkbox" class="slave" value="제목1"></td>
@@ -32,28 +36,28 @@
                     <td>2021.01.01</td>
                 </tr> 
                 <tr>
-                    <td><input type="checkbox" class="slave" value="제목2"></td>
-                    <td>제목2</td>
+                    <td><input type="checkbox" class="slave" value="제목11"></td>
+                    <td>제목11</td>
                     <td>2021.01.01</td>
                 </tr> 
                 <tr>
-                    <td><input type="checkbox" class="slave" value="제목3"></td>
-                    <td>제목3</td>
+                    <td><input type="checkbox" class="slave" value="제목111"></td>
+                    <td>제목111</td>
                     <td>2021.01.01</td>
                 </tr> 
                 <tr>
-                    <td><input type="checkbox" class="slave" value="제목4"></td>
-                    <td>제목4</td>
+                    <td><input type="checkbox" class="slave" value="제목12222"></td>
+                    <td>제목12222</td>
                     <td>2021.01.01</td>
                 </tr> 
                 <tr>
-                    <td><input type="checkbox" class="slave" value="제목5"></td>
-                    <td>제목5</td>
+                    <td><input type="checkbox" class="slave" value="제목13333"></td>
+                    <td>제목13333</td>
                     <td>2021.01.01</td>
                 </tr> 
                 <tr>
-                    <td><input type="checkbox" class="slave" value="제목6"></td>
-                    <td>제목6</td>
+                    <td><input type="checkbox" class="slave" value="제목14444"></td>
+                    <td>제목14444</td>
                     <td>2021.01.01</td>
                 </tr> 
             </tbody>
@@ -62,14 +66,32 @@
         <button id="log">로그</button>
 
     </body>
+
     <script>
-       
-            $(function(){
-                $("#master").click(function(){
-                    if($("#master").is(":checked")) $("input[class=slave]").prop("checked", true);
-                    else $("input[class=slave]").prop("checked", false);
-                });
+//내용을 살펴보면
+        $(function () {
+            $("#master").click(function(){
+                if($(this).is(':checked')){
+                    $(".slave").prop("checked",true);
+                }
+                else{
+                    $(".slave").prop("checked",false);
+                }
+ 
+                
             });
-       
+
+            $("#log").click(function(){
+                // alert($(".slave:checked").length);
+                $(".slave").each(
+                    function(){
+                        if($(this).is(":checked")){
+                            console.log($(this).val());
+                        }
+                    } 
+                )
+            });
+        });
     </script>
+
 </html>

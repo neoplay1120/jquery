@@ -1,4 +1,5 @@
 <html>
+
     <head>
         <title>jquery</title>
         <meta charset="utf-8">
@@ -15,9 +16,11 @@
 
         <style></style>
     </head>
-    <body>
 
+
+    <body>
         <table class="table">
+            
             <thead>
                 <tr>
                     <td><input type="checkbox"   id="master"></td>
@@ -25,6 +28,7 @@
                     <td>닐짜</td>
                 </tr>
             </thead>
+
             <tbody>
                 <tr>
                     <td><input type="checkbox" class="slave" value="제목1"></td>
@@ -62,8 +66,9 @@
         <button id="log">로그</button>
 
     </body>
-    <script>
 
+    <script>
+//내용을 살펴보면
         $(function () {
             $("#master").click(function(){
                 if($(this).is(':checked')){
@@ -73,10 +78,11 @@
                     $(".slave").prop("checked",false);
                 }
  
-                alert($(".slave:checked").length);
+                
             });
 
             $("#log").click(function(){
+                // alert($(".slave:checked").length);
                 $(".slave").each(
                     function(){
                         if($(this).is(":checked")){
@@ -87,4 +93,5 @@
             });
         });
     </script>
+
 </html>
